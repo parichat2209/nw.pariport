@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ปาริชาติ คุ้มชูศรี | Academic Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Sarabun', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Sarabun & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Sarabun', 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/75 dark:bg-slate-900/75 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0 font-bold text-lg text-brand-600 dark:text-indigo-400">
+                    <a href="#hero" class="hover:opacity-80 transition">Parichat.K</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#about" class="hover:text-brand-600 dark:hover:text-indigo-400 transition">เกี่ยวกับ</a>
+                    <a href="#experience" class="hover:text-brand-600 dark:hover:text-indigo-400 transition">การศึกษาและการทำงาน</a>
+                    <a href="#skills" class="hover:text-brand-600 dark:hover:text-indigo-400 transition">ความสามารถ</a>
+                    <a href="#hobbies" class="hover:text-brand-600 dark:hover:text-indigo-400 transition">งานอดิเรก</a>
+                    <a href="#contact" class="hover:text-brand-600 dark:hover:text-indigo-400 transition">ติดต่อ</a>
+                </div>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-3">
+                    <button id="themeToggleBtn" aria-label="Toggle dark mode" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition">
+                        <i id="themeIcon" class="fas fa-moon text-base"></i>
+                    </button>
+                    <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="md:hidden p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+            <a href="#about" class="block py-2 text-sm hover:text-brand-600 dark:hover:text-indigo-400 transition">เกี่ยวกับ</a>
+            <a href="#experience" class="block py-2 text-sm hover:text-brand-600 dark:hover:text-indigo-400 transition">การศึกษาและการทำงาน</a>
+            <a href="#skills" class="block py-2 text-sm hover:text-brand-600 dark:hover:text-indigo-400 transition">ความสามารถ</a>
+            <a href="#hobbies" class="block py-2 text-sm hover:text-brand-600 dark:hover:text-indigo-400 transition">งานอดิเรก</a>
+            <a href="#contact" class="block py-2 text-sm hover:text-brand-600 dark:hover:text-indigo-400 transition">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 py-12 flex-grow">
+
+        <!-- Hero Section -->
+        <section id="hero" class="pt-8 sm:pt-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+                <div class="space-y-6 text-center md:text-left md:w-2/3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 dark:bg-indigo-950/80 dark:text-indigo-300 border border-brand-100 dark:border-indigo-800">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Academic Portfolio
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        ปาริชาติ คุ้มชูศรี
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 font-medium">
+                        Parichat Khumchusri
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-base max-w-xl">
+                        นักวิชาการและผู้ใฝ่เรียนรู้ที่มีความขยัน มุ่งมั่น มีความรับผิดชอบสูง พร้อมจิตสาธารณะที่ชอบช่วยเหลือผู้อื่น มุ่งเน้นการพัฒนาทักษะทางวิชาการและเทคโนโลยีเพื่อการสร้างประโยชน์ต่อสังคม
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                        <a href="#contact" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium shadow-sm shadow-indigo-200 dark:shadow-none transition flex items-center gap-2">
+                            <i class="fas fa-envelope"></i> ติดต่อผู้เขียน
+                        </a>
+                        <a href="javascript:void(0)" onclick="alert('คุณสามารถเปลี่ยนลิงก์นี้เป็นไฟล์ PDF CV ของคุณได้ง่ายๆ ในไฟล์ index.html')" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-200 font-medium transition flex items-center gap-2">
+                            <i class="fas fa-download"></i> ดาวน์โหลด CV
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Profile Avatar Card -->
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="relative w-48 h-48 sm:w-60 sm:h-60 rounded-3xl bg-gradient-to-tr from-brand-500 to-indigo-300 p-1 shadow-xl">
+                        <div class="w-full h-full bg-slate-100 dark:bg-slate-800 rounded-[22px] flex flex-col items-center justify-center p-6 text-center overflow-hidden relative">
+                            <div class="w-24 h-24 rounded-full bg-brand-100 dark:bg-slate-700 text-brand-600 dark:text-indigo-400 flex items-center justify-center text-4xl mb-3 font-bold">
+                                PK
+                            </div>
+                            <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Academic & Researcher</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me / Profile Section -->
+        <section id="about" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fas fa-user-circle text-brand-600 dark:text-indigo-400"></i> ข้อมูลส่วนตัว (Profile)
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Personal Info Card -->
+                <div class="bg-white dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm space-y-4">
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100 text-lg mb-4 flex items-center gap-2">
+                        <i class="fas fa-address-card text-brand-500"></i> ข้อมูลพื้นฐาน
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-calendar-alt text-slate-400 mt-1"></i>
+                            <div>
+                                <span class="font-semibold block text-slate-800 dark:text-slate-200">วัน/เดือน/ปีเกิด:</span>
+                                22 กันยายน 2546
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-slate-400 mt-1"></i>
+                            <div>
+                                <span class="font-semibold block text-slate-800 dark:text-slate-200">ภูมิลำเนา / ที่อยู่:</span>
+                                ตำบลท่าบ่อ อำเภอท่าบ่อ จังหวัดหนองคาย 43110
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone-alt text-slate-400 mt-1"></i>
+                            <div>
+                                <span class="font-semibold block text-slate-800 dark:text-slate-200">เบอร์โทรศัพท์:</span>
+                                092-624-3950
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Personal Strengths Card -->
+                <div class="bg-white dark:bg-slate-800/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm space-y-4">
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100 text-lg mb-4 flex items-center gap-2">
+                        <i class="fas fa-star text-amber-500"></i> จุดแข็งและลักษณะเด่น
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-100 dark:border-slate-700">
+                            <span class="font-medium text-slate-800 dark:text-slate-200 block mb-1"><i class="fas fa-check-circle text-emerald-500 mr-2"></i>ความขยันและตั้งใจ</span>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">มุ่งมั่นในการเรียนรู้สิ่งใหม่ๆ และทุ่มเทให้กับงานที่ได้รับมอบหมายอย่างเต็มความสามารถ</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-100 dark:border-slate-700">
+                            <span class="font-medium text-slate-800 dark:text-slate-200 block mb-1"><i class="fas fa-check-circle text-emerald-500 mr-2"></i>มีความรับผิดชอบสูง</span>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">ส่งมอบผลงานตรงต่อเวลา มีระเบียบวินัย และรักษามาตรฐานงานทางวิชาการ</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-100 dark:border-slate-700">
+                            <span class="font-medium text-slate-800 dark:text-slate-200 block mb-1"><i class="fas fa-check-circle text-emerald-500 mr-2"></i>จิตสาธารณะ</span>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">พร้อมช่วยเหลือผู้อื่น มีมนุษยสัมพันธ์ที่ดี และทำงานร่วมกับผู้อื่นได้ดีเยี่ยม</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Work Experience Section -->
+        <section id="experience" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-brand-600 dark:text-indigo-400"></i> ประวัติการศึกษาและการทำงาน
+                </h2>
+            </div>
+
+            <!-- Minimalist Timeline -->
+            <div class="relative border-l-2 border-slate-200 dark:border-slate-700 ml-4 pl-6 space-y-10">
+                <!-- Timeline Item 1 -->
+                <div class="relative group">
+                    <!-- Circle Marker -->
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-slate-50 dark:border-slate-900"></div>
+                    <div class="bg-white dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-brand-50 text-brand-700 dark:bg-indigo-950 dark:text-indigo-300">
+                            ปัจจุบัน / กำลังศึกษา
+                        </span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-2">ระดับปริญญาตรี (Undergraduate Degree)</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">สาขาวิชา / คณะทางการศึกษาหรือวิชาการ</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                            มุ่งเน้นการศึกษาค้นคว้า การพัฒนาทักษะวิชาการเฉพาะทาง และเข้าร่วมกิจกรรมเสริมหลักสูตรอย่างสม่ำเสมอ
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-600 border-4 border-slate-50 dark:border-slate-900"></div>
+                    <div class="bg-white dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+                            ระดับมัธยมศึกษา
+                        </span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-2">โรงเรียนระดับมัธยมศึกษา</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">จังหวัดหนองคาย</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                            สำเร็จการศึกษาด้วยผลการเรียนที่ดี เข้าร่วมกิจกรรมทางวิชาการและจิตอาสาของโรงเรียน
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Special Talents Section -->
+        <section id="skills" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fas fa-lightbulb text-brand-600 dark:text-indigo-400"></i> ความสามารถพิเศษและทักษะเฉพาะทาง
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Academic Skill -->
+                <div class="bg-white dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-brand-600 dark:text-indigo-400 flex items-center justify-center text-lg font-bold mb-4">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base mb-1">ทักษะทางวิชาการ</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        การวิเคราะห์ข้อมูล การสรุปจับประเด็น และการศึกษารวบรวมข้อมูลทางวิชาการอย่างเป็นระบบ
+                    </p>
+                </div>
+
+                <!-- Technical & Data Skill -->
+                <div class="bg-white dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center text-lg font-bold mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base mb-1">ทักษะเทคนิคและการจัดการ</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        ทักษะเชิงเทคนิค การจัดการข้อมูลดิจิทัล และการประยุกต์ใช้เครื่องมือเทคโนโลยีอย่างมีประสิทธิภาพ
+                    </p>
+                </div>
+
+                <!-- Music Skill -->
+                <div class="bg-white dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-center justify-center text-lg font-bold mb-4">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base mb-1">ดนตรี (Music)</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        ทักษะทางดนตรี ช่วยส่งเสริมสมาธิ ความคิดสร้างสรรค์ และสุนทรียภาพในการดำเนินชีวิต
+                    </p>
+                </div>
+
+                <!-- Art Skill -->
+                <div class="bg-white dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 rounded-xl bg-pink-50 dark:bg-pink-950/60 text-pink-600 dark:text-pink-400 flex items-center justify-center text-lg font-bold mb-4">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base mb-1">ศิลปะ (Art & Design)</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        ทักษะทางศิลปะและการจัดวางองค์ประกอบ เสริมสร้างมุมมองการถ่ายทอดชิ้นงานให้ออกมาสวยงาม
+                    </p>
+                </div>
+
+                <!-- Sports Skill -->
+                <div class="bg-white dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition sm:col-span-2 lg:col-span-1">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg font-bold mb-4">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-slate-100 text-base mb-1">กีฬา (Sports)</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        ความเชี่ยวชาญด้านกีฬา สร้างระเบียบวินัย น้ำใจนักกีฬา การทำงานเป็นทีมและการดูแลสุขภาพ
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies & Interests Section -->
+        <section id="hobbies" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+                    <i class="fas fa-heart text-brand-600 dark:text-indigo-400"></i> งานอดิเรกและความสนใจ
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <!-- Hobby 1 -->
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 text-center space-y-2">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xl">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100 text-sm">อ่านหนังสือวิชาการ</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">สั่งสมความรู้และบทความใหม่ๆ</p>
+                </div>
+
+                <!-- Hobby 2 -->
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 text-center space-y-2">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xl">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100 text-sm">การเขียนบทความ</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">ถ่ายทอดความคิดและองค์ความรู้</p>
+                </div>
+
+                <!-- Hobby 3 -->
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 text-center space-y-2">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xl">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100 text-sm">การทำอาหาร</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">สร้างสรรค์เมนูและผ่อนคลาย</p>
+                </div>
+
+                <!-- Hobby 4 -->
+                <div class="bg-white dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 text-center space-y-2">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-xl">
+                        <i class="fas fa-volleyball-ball"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100 text-sm">การเล่นกีฬา</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">เสริมสร้างสุขภาพและสมาธิ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="space-y-8 scroll-mt-24">
+            <div class="bg-gradient-to-r from-brand-600 to-indigo-700 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+                <div class="max-w-2xl mx-auto text-center space-y-6">
+                    <h2 class="text-2xl sm:text-3xl font-bold">สนใจร่วมงานหรือสอบถามข้อมูลเพิ่มเติม</h2>
+                    <p class="text-indigo-100 text-sm sm:text-base leading-relaxed">
+                        ยินดีต้อนรับการแลกเปลี่ยนความรู้ทางวิชาการ ความร่วมมือ หรือข้อซักถามต่างๆ สามารถติดต่อได้ตามช่องทางด้านล่างนี้
+                    </p>
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-slate-900">
+                        <a href="tel:0926243950" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-indigo-50 font-medium transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fas fa-phone-alt text-brand-600"></i> 092-624-3950
+                        </a>
+                        <a href="mailto:example@email.com" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-700/50 border border-indigo-400/30 hover:bg-brand-700 text-white font-medium transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fas fa-envelope"></i> ส่งอีเมลสอบถาม
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Box for GitHub Pages Deployment (Included in code for developer reference) -->
+        <section class="p-6 rounded-2xl bg-amber-50 dark:bg-slate-800/80 border border-amber-200 dark:border-slate-700 space-y-3">
+            <h3 class="font-bold text-amber-800 dark:text-amber-400 text-sm flex items-center gap-2">
+                <i class="fab fa-github"></i> คำแนะนำในการอัปโหลดขึ้น GitHub Pages:
+            </h3>
+            <ol class="list-decimal list-inside text-xs text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+                <li>บันทึกไฟล์นี้ในชื่อ <code class="bg-amber-100 dark:bg-slate-700 px-1 py-0.5 rounded font-mono text-amber-900 dark:text-amber-300">index.html</code></li>
+                <li>สร้าง Repository ใหม่บน GitHub เช่น <code class="bg-amber-100 dark:bg-slate-700 px-1 py-0.5 rounded font-mono text-amber-900 dark:text-amber-300">academic-portfolio</code></li>
+                <li>Upload ไฟล์ <code class="bg-amber-100 dark:bg-slate-700 px-1 py-0.5 rounded font-mono text-amber-900 dark:text-amber-300">index.html</code> ขึ้นไปยังสาขา (Branch) <code class="bg-amber-100 dark:bg-slate-700 px-1 py-0.5 rounded font-mono text-amber-900 dark:text-amber-300">main</code></li>
+                <li>ไปที่ <strong>Settings</strong> &gt; <strong>Pages</strong> ใน Repository เลือก Build and deployment Source เป็น <strong>Deploy from a branch</strong> และเลือก Branch เป็น <code class="bg-amber-100 dark:bg-slate-700 px-1 py-0.5 rounded font-mono text-amber-900 dark:text-amber-300">main / root</code> แล้วกด Save</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 text-center text-xs text-slate-500 dark:text-slate-400 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 space-y-2">
+            <p>© 2026 Parichat Khumchusri. All rights reserved.</p>
+            <p class="text-[11px] text-slate-400 dark:text-slate-500">Designed with Minimal Modern Style & Tailwind CSS | Designed for GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Dark / Light Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = document.getElementById('themeIcon');
+
+        // Check user system preference or localStorage
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
